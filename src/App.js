@@ -1,6 +1,10 @@
 
 import './App.css';
 import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import AddTools from "./components/AddTools";
+import Tools from "./components/Tools";
+import ToolsList from "./components/ToolsList";
 
 
 function App() {
@@ -9,7 +13,7 @@ function App() {
    
 <div className="h-full w-full absolute bg-gray-200 justify-center">
 
-  
+
            
 <div className="overlay flex flex-row items-center justify-center">
         <div className="flex flex-row  lg:w-auto lg:flex-row">
@@ -46,25 +50,33 @@ function App() {
                                  </button> 
                                  </div>
 
-
-
-
-                                                  
+                                 <div className="flex items-center justify-end">
+                                
+                                  <Routes>
+                                    <Route path="/add" element={<AddTools/>} />
+                                    <Route path="/tools" element={<ToolsList/>} />
+                                    <Route path="/tools/:id" element={<Tools/>} />
+                                    </Routes>
+                                 </div>                             
                       </div>
                    </div>
-                </div> 
-                 
+                </div>     
             </div>
 
-           
+    
       
         </div>
+        
       </div>
-      <div className="overlay flex flex-row items-center justify-center">
-                  
-                  dsadadhjkjlk;jhghjklklkjhkjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-                  
-                  </div>
+     
+      <div className="my-6 lg:my-12 container px-6 mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-center pb-4 border-b border-gray-300">                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                          when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                          It has survived not only five centuries, but also the leap into electronic typesetting, 
+                          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                      </div>
+      
+                 
 </div> 
 
 
