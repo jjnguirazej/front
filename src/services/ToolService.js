@@ -18,6 +18,7 @@ const remove = id => {
 const findByTag = tag => {
     return http.get('/tools?tag=${tag}');
 };
+
 export default {
     getAll,
     get,
